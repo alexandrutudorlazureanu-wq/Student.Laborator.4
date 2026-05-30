@@ -9,6 +9,8 @@ public class Student {
     private String formatieDeStudiu;
     private float nota;
 
+
+
     public Student(int numarMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.numarMatricol = numarMatricol;
         this.prenume = prenume;
@@ -17,10 +19,17 @@ public class Student {
         this.nota = 0.0f;
     }
 
-    public int getNumarMatricol() { return numarMatricol; }
 
+
+    public int getNumarMatricol() { return numarMatricol; }
+    public String getPrenume() { return prenume; }
+    public String getNume() { return nume; }
+    public String getFormatieDeStudiu() { return formatieDeStudiu; }
 
     public void setNota(float nota) { this.nota = nota; }
+
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -30,10 +39,15 @@ public class Student {
         return numarMatricol == student.numarMatricol;
     }
 
+
+
+
     @Override
     public int hashCode() {
         return Objects.hash(numarMatricol);
     }
+
+
 
     @Override
     public String toString() {
